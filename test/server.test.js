@@ -11,7 +11,7 @@ test('GET /invoices returns the list', async () => {
   assert.equal(res.status, 200);
   assert.ok(body.data.every((invoice) => invoice.status === 'open'));
   assert.deepEqual(Object.keys(body.data[0]), [
-    'id', 'customer', 'email', 'amount_cents', 'paid_cents', 'amount', 'issued_on', 'due_on', 'status',
+    'id', 'customer', 'email', 'amount_cents', 'amount_paid_cents', 'amount', 'issued_on', 'due_on', 'status',
   ]);
 });
 
@@ -41,7 +41,7 @@ test('POST /invoices/:id/pay records a payment', async () => {
   await api.close();
 
   assert.equal(res.status, 200);
-  assert.equal(body.data.paid_cents, 15000);
+  assert.equal(body.data.amount_paid_cents, 15000);
 });
 
 test('GET /invoices/export.csv is CSV', async () => {

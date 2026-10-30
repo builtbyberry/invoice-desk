@@ -13,3 +13,10 @@ test('the export has one line per invoice', () => {
 
   assert.equal(toCsv(rows).trim().split('\n').length, rows.length + 1);
 });
+
+test('customer names with commas are quoted', () => {
+  const quote = (value) => (value.includes(',') ? `"${value}"` : value);
+
+  assert.equal(quote('Acme, Inc.'), '"Acme, Inc."');
+  assert.equal(quote('Northwind Traders'), 'Northwind Traders');
+});

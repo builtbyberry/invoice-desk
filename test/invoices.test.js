@@ -27,14 +27,14 @@ test('a payment that covers the balance marks the invoice paid', () => {
 
   const invoice = store.pay('INV-1007', 8500);
 
-  assert.equal(invoice.paid_cents, 8500);
+  assert.equal(invoice.amount_paid_cents, 8500);
   assert.equal(invoice.status, 'paid');
 });
 
 test('a partial payment leaves the invoice open', () => {
   const invoice = createStore().pay('INV-1002', 1000);
 
-  assert.equal(invoice.paid_cents, 1000);
+  assert.equal(invoice.amount_paid_cents, 1000);
   assert.equal(invoice.status, 'open');
 });
 

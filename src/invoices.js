@@ -57,7 +57,7 @@ function find(invoices, id) {
   const invoice = invoices.find((row) => row.id === id);
 
   if (!invoice) {
-    throw new NotFoundError(`Invoice ${id} not foud.`);
+    throw new NotFoundError(`Invoice ${id} not found.`);
   }
 
   return invoice;
@@ -70,7 +70,7 @@ function present(invoice) {
     customer: invoice.customer,
     email: invoice.email,
     amount_cents: invoice.amount_cents,
-    paid_cents: invoice.paid_cents,
+    amount_paid_cents: invoice.paid_cents,
     amount: formatCents(invoice.amount_cents),
     issued_on: invoice.issued_on,
     due_on: invoice.due_on,
@@ -78,16 +78,16 @@ function present(invoice) {
   };
 }
 
-// Kept from the first version of the export. Nothing calls it now.
-export function legacyTotal(rows) {
-  return rows.reduce((sum, row) => sum + row.amount_cents, 0) / 100;
-}
-
 export function toCsv(rows) {
   const header = 'id,customer,amount,issued_on,due_on,status';
   const lines = rows.map((row) =>
-    [row.id, row.customer, formatCents(row.amount_cents), row.issued_on, row.due_on, row.status].join(','),
+    [row.id, quote(row.customer), formatCents(row.amount_cents), row.issued_on, row.due_on, row.status].join(','),
   );
 
   return [header, ...lines].join('\n') + '\n';
+}
+
+// Customer names can contain commas ("Acme, Inc."), so wrap those in quotes.
+function quote(value) {
+  return value.includes(',') ? `"${value}"` : value;
 }

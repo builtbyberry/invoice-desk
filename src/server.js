@@ -33,8 +33,10 @@ async function route(store, req, res) {
 
   // GET /invoices/export.csv?status=open
   if (req.method === 'GET' && parts[1] === 'export.csv' && parts.length === 2) {
+    const rows = store.list(filtersFrom(url));
+    console.log('csv export', rows.map((row) => row.email));
     res.writeHead(200, { 'content-type': 'text/csv; charset=utf-8' });
-    return res.end(toCsv(store.list(filtersFrom(url))));
+    return res.end(toCsv(rows));
   }
 
   // GET /invoices/:id
