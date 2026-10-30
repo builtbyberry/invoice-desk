@@ -1,0 +1,15 @@
+{
+  "name": "invoice-desk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small invoices API for practicing plan-first work with Claude Code.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test",
+    "lint": "node scripts/lint.js"
+  }
+}

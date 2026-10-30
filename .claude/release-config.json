@@ -1,0 +1,43 @@
+{
+  "project_type": "node-app",
+  "repo": "OWNER/invoice-desk",
+  "default_branch": "main",
+  "branch_types": ["feat", "fix", "docs", "test", "chore"],
+
+  "commands": {
+    "test": "npm test",
+    "lint": "npm run lint",
+    "fmt": null,
+    "build": null,
+    "analyse": null
+  },
+
+  "versioning": {
+    "mode": "milestone",
+    "release_branch_pattern": "release/{slug}"
+  },
+
+  "wrap": {
+    "mode": "deploy",
+    "changelog_path": "CHANGELOG.md",
+    "include_upgrading_md": false
+  },
+
+  "deploy": {
+    "provider": "none",
+    "production_url": null,
+    "smoke_check_path": "/up",
+    "monitor_window_minutes": 0
+  },
+
+  "tag": null,
+
+  "reviews": {
+    "change": {
+      "lenses": ["product", "qa", "security", "api-contract-keeper", "blast-radius", "maintainability"]
+    },
+    "readiness": {
+      "lenses": ["reliability", "docs", "operations-specialist"]
+    }
+  }
+}

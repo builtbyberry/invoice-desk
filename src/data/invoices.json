@@ -1,0 +1,14 @@
+[
+  { "id": "INV-1001", "customer": "Northwind Traders", "email": "billing@northwind.example", "amount_cents": 125000, "paid_cents": 125000, "issued_on": "2026-08-03", "due_on": "2026-09-02", "status": "paid" },
+  { "id": "INV-1002", "customer": "Acme, Inc.", "email": "ap@acme.example", "amount_cents": 48000, "paid_cents": 0, "issued_on": "2026-08-15", "due_on": "2026-09-14", "status": "open" },
+  { "id": "INV-1003", "customer": "Blue Harbor Dental", "email": "office@blueharbor.example", "amount_cents": 31050, "paid_cents": 10000, "issued_on": "2026-08-28", "due_on": "2026-09-27", "status": "open" },
+  { "id": "INV-1004", "customer": "\"Bright Lights\" Studio", "email": "hello@brightlights.example", "amount_cents": 99900, "paid_cents": 0, "issued_on": "2026-09-01", "due_on": "2026-10-01", "status": "open" },
+  { "id": "INV-1005", "customer": "Greenfield Farms", "email": "accounts@greenfield.example", "amount_cents": 15000, "paid_cents": 15000, "issued_on": "2026-09-10", "due_on": "2026-10-10", "status": "paid" },
+  { "id": "INV-1006", "customer": "Smith, Jones & Patel LLP", "email": "finance@sjp.example", "amount_cents": 270000, "paid_cents": 135000, "issued_on": "2026-09-18", "due_on": "2026-10-18", "status": "open" },
+  { "id": "INV-1007", "customer": "Riverside Yoga", "email": "studio@riverside.example", "amount_cents": 8500, "paid_cents": 0, "issued_on": "2026-09-30", "due_on": "2026-10-30", "status": "open" },
+  { "id": "INV-1008", "customer": "Northwind Traders", "email": "billing@northwind.example", "amount_cents": 64000, "paid_cents": 0, "issued_on": "2026-10-05", "due_on": "2026-11-04", "status": "open" },
+  { "id": "INV-1009", "customer": "Old Mill Bakery", "email": "orders@oldmill.example", "amount_cents": 22000, "paid_cents": 0, "issued_on": "2026-10-12", "due_on": "2026-11-11", "status": "void" },
+  { "id": "INV-1010", "customer": "Acme, Inc.", "email": "ap@acme.example", "amount_cents": 51000, "paid_cents": 0, "issued_on": "2026-10-20", "due_on": "2026-11-19", "status": "open" },
+  { "id": "INV-1011", "customer": "Blue Harbor Dental", "email": "office@blueharbor.example", "amount_cents": 31050, "paid_cents": 0, "issued_on": "2026-10-28", "due_on": "2026-11-27", "status": "open" },
+  { "id": "INV-1012", "customer": "Cedar & Pine Design", "email": "studio@cedarpine.example", "amount_cents": 180000, "paid_cents": 0, "issued_on": "2026-11-02", "due_on": "2026-12-02", "status": "open" }
+]
