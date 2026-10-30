@@ -8,7 +8,7 @@ It's deliberately small and deliberately imperfect: real-looking code, a `CLAUDE
 
 You need Node 22 or later and a GitHub account. Nothing to install.
 
-1. On GitHub, choose **Use this template** (or fork it) to make your own copy, then clone your copy.
+1. On GitHub, choose **Use this template**, then **Create a new repository**. Check **Include all branches**, so your copy has the `flawed-review` branch for lesson 6. Then clone your copy.
 2. Run `npm test`. Every test should pass.
 3. In `.claude/release-config.json`, replace `OWNER` with your GitHub user or organization. You need this only for Part 2 (Marshall).
 
