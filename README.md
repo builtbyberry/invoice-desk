@@ -24,7 +24,7 @@ The API, once you run `npm start`:
 
 ## The tickets
 
-Tickets 1 and 2 are for Part 1, one each. Tickets 3 to 5 are one small release for Part 2.
+Ticket 1 is for Part 1. Ticket 2 is the course's worked example: you'll watch it done, step by step, before you do ticket 1. Ticket 6 is for lesson 7, on your own. Tickets 3 to 5 are one small release for Part 2.
 
 When the course tells you to pick a ticket, take it from here. Each ticket is written as a teammate would write it, no more and no less: if it doesn't answer something, that's part of the exercise.
 
@@ -96,3 +96,15 @@ When the course tells you to pick a ticket, take it from here. Each ticket is wr
 - Only overdue invoices can be reminded. Anything else is a 400 with an error message.
 - Reminders can't be sent too often.
 - No email is sent; this only records the reminder. Email comes later.
+
+---
+
+### Ticket 6: Overpayments disappear
+
+**Bug.** Accounts recorded a $300.00 payment on INV-1003 (Blue Harbor Dental), which had $210.50 left to pay. The API marked it paid, and the other $89.50 isn't anywhere.
+
+**Acceptance criteria**
+
+- A payment of more than what's left on an invoice isn't silently lost.
+- A payment of exactly what's left marks the invoice paid, as it does now.
+- No existing field changes.
